@@ -17,7 +17,9 @@ This is beautiful photo gallery + slider plugin for wordPress blogs and sites.Ad
 WordPress photo gallery + slider is beautiful photo thumbnail gallery with main image.Admin can manages any number of images into the photo gallery slider.
 Admin can add,edit and delete slider images.Before add slider to wordPress blog admin can preview a slider.Admin can set height,width of slider images and thumbnil images also.Admin can also set speed.Admin can also set if want to slide automatic slider or not and many other settings.
 
-**Find WordPress Photo Gallery Pro Plugin(Unlimited Photo Gallary+Much more) at [WordPress pro Plugins](http://www.my-php-scripts.net/index.php/Wordpress/wordpress-photo-gallery-pro.html)**
+**Find WordPress Photo Gallery Pro Plugin (Unlimited Photo Gallary+Much more) at [WordPress Pro Plugins](http://www.my-php-scripts.net/index.php/Wordpress/wordpress-photo-gallery-pro.html)**
+
+**[Live Demo WP Photo Gallery pro](http://my-php-scripts.net/wpdemo/wp-photo-gallery-pro/)**
 
 **Please rate this plugin if you find it useful**
 
@@ -72,7 +74,7 @@ to theme or pages/posts.
 
 This plugin is easy to install like other plug-ins of Wordpress as you need to just follow the below mentioned steps:
 
-1. upload wp-photo-gallery-plugin folder to wp-Content/plugins folder.
+1. upload wp-photo-gallery folder to wp-Content/plugins folder.
 
 2. Activate the plugin from Dashboard / Plugins window.
 

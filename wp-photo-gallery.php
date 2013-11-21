@@ -1295,20 +1295,23 @@
                                             
                                             $imagetoCheck=$wpcurrentdir.'/imagestoscroll/'.$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'];
                                             
-                                             if(file_exists($imagetoCheck)){
+                                            if(file_exists($imagetoCheck)){
                                                     $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'];
                                                     
                                             }
                                            else{
                                                  
-                                                   
-                                                  if(file_exists($wpcurrentdir."/imagestoscroll/".$row['image_name'])){
-                                                      
-                                                      $image = new Image($wpcurrentdir."/imagestoscroll/".$row['image_name']);
-                                                      $image->resize($imagewidth,$imageheight,false);                                                   
-                                                      $image->save($filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth,$wpcurrentdir."/imagestoscroll/");
-                                                      $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'];
-                                                  }  
+                                                   if(file_exists($wpcurrentdir."/imagestoscroll/".$row['image_name'])){
+                                                       
+                                                       $resizeObj = new resize($wpcurrentdir."/imagestoscroll/".$row['image_name']); 
+                                                       $resizeObj -> resizeImage($imagewidth, $imageheight, "exact"); 
+                                                       $resizeObj -> saveImage($wpcurrentdir."/imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'], 100); 
+                                                       $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'];
+                                                       
+                                                   }else{
+                                                       
+                                                       $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$imagename;
+                                                   }   
                                                    
                                            }
                                            
@@ -1422,13 +1425,16 @@
                                             }
                                            else{
                                                  
-                                                   if(file_exists($wpcurrentdir."/imagestoscroll/".$row['image_name'])){
+                                                  if(file_exists($wpcurrentdir."/imagestoscroll/".$row['image_name'])){
                                                        
-                                                        $image = new Image($wpcurrentdir."/imagestoscroll/".$row['image_name']);
-                                                        $image->resize($imagewidth,$imageheight,false);                                                   
-                                                        $image->save($filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth,$wpcurrentdir."/imagestoscroll/");
-                                                        $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'];
-                                                   } 
+                                                       $resizeObj = new resize($wpcurrentdir."/imagestoscroll/".$row['image_name']); 
+                                                       $resizeObj -> resizeImage($imagewidth, $imageheight, "exact"); 
+                                                       $resizeObj -> saveImage($wpcurrentdir."/imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'], 100); 
+                                                       $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$filenamewithoutextension.'_'.$imageheight.'_'.$imagewidth.'.'.$pathinfo['extension'];
+                                                   }else{
+                                                       
+                                                       $outputimg = plugin_dir_url(__FILE__)."imagestoscroll/".$imagename;
+                                                   }    
                                                    
                                            }
                                            
