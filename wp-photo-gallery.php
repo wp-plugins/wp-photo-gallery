@@ -52,8 +52,8 @@
                                                         'transition_interval' => '4000',
                                                         'show_panel_nav' =>'1',
                                                         'enable_overlays' => '0',
-                                                        'panel_width'=>'',
-                                                        'panel_height' => '',
+                                                        'panel_width'=>'550',
+                                                        'panel_height' => '400',
                                                         'panel_animation' => 'fade',
                                                         'panel_scale' => 'fit',
                                                         'overlay_position'=> 'bottom',
@@ -230,8 +230,8 @@
                                     <td class="value">
                                         <select id="show_panel_nav" name="show_panel_nav" class="select">
                                             <option value="">Select</option>
-                                            <option <?php if($settings['show_panel_nav']===1):?> selected="selected" <?php endif;?>  value="1" >Yes</option>
-                                            <option <?php if($settings['show_panel_nav']===0):?> selected="selected" <?php endif;?>  value="0">No</option>
+                                            <option <?php if($settings['show_panel_nav']==1):?> selected="selected" <?php endif;?>  value="1" >Yes</option>
+                                            <option <?php if($settings['show_panel_nav']==0):?> selected="selected" <?php endif;?>  value="0">No</option>
                                         </select>            
                                         <div style="clear:both"></div>
                                         <div></div>
@@ -278,8 +278,8 @@
                                     <td class="value">
                                         <select id="pan_images" name="pan_images" class="select">
                                             <option value="">Select</option>
-                                            <option <?php if($settings['pan_images']===1):?> selected="selected" <?php endif;?>  value="1">Yes</option>
-                                            <option <?php if($settings['pan_images']===0):?> selected="selected" <?php endif;?>  value="0" >No</option>
+                                            <option <?php if($settings['pan_images']==1):?> selected="selected" <?php endif;?>  value="1">Yes</option>
+                                            <option <?php if($settings['pan_images']==0):?> selected="selected" <?php endif;?>  value="0" >No</option>
                                         </select>            
                                         <div style="clear:both"></div>
                                         <div></div>
@@ -306,8 +306,8 @@
                                     <td class="value">
                                         <select id="show_filmstrip" name="show_filmstrip" class="select">
                                             <option value="">Select</option>
-                                            <option <?php if($settings['show_filmstrip']===1):?> selected="selected" <?php endif;?>  value="1" >Yes</option>
-                                            <option <?php if($settings['show_filmstrip']===0):?> selected="selected" <?php endif;?>  value="0">No</option>
+                                            <option <?php if($settings['show_filmstrip']==1):?> selected="selected" <?php endif;?>  value="1" >Yes</option>
+                                            <option <?php if($settings['show_filmstrip']==0):?> selected="selected" <?php endif;?>  value="0">No</option>
                                         </select> 
                                         <div style="clear:both"></div>
                                         <div></div>           
@@ -318,8 +318,8 @@
                                     <td class="value">
                                         <select id="autoplay" name="autoplay" class="select">
                                             <option value="">Select</option>
-                                            <option <?php if($settings['autoplay']===1):?> selected="selected" <?php endif;?>  value="1" >Yes</option>
-                                            <option <?php if($settings['autoplay']===0):?> selected="selected" <?php endif;?>  value="0">No</option>
+                                            <option <?php if($settings['autoplay']==1):?> selected="selected" <?php endif;?>  value="1" >Yes</option>
+                                            <option <?php if($settings['autoplay']==0):?> selected="selected" <?php endif;?>  value="0">No</option>
                                         </select>   
                                         <div style="clear:both"></div>
                                         <div></div>         
@@ -384,8 +384,8 @@
                                     <td class="value">
                                         <select id="show_infobar" name="show_infobar" class=" select">
                                             <option value="">Select</option>
-                                            <option <?php if($settings['show_infobar']===1):?> selected="selected" <?php endif;?>  value="1">Yes</option>
-                                            <option <?php if($settings['show_infobar']===0):?> selected="selected" <?php endif;?>  value="0" >No</option>
+                                            <option <?php if($settings['show_infobar']==1):?> selected="selected" <?php endif;?>  value="1">Yes</option>
+                                            <option <?php if($settings['show_infobar']==0):?> selected="selected" <?php endif;?>  value="0" >No</option>
                                         </select>            
                                         <div style="clear:both"></div>
                                         <div></div>
@@ -1091,8 +1091,7 @@
                                 validExtensions[1]='jpeg';
                                 validExtensions[2]='png';
                                 validExtensions[3]='gif';
-                                validExtensions[4]='bmp';
-                                validExtensions[5]='tif';
+                                
                                 
                                 var extension = filename.substr( (filename.lastIndexOf('.') +1) ).toLowerCase();
                                 
