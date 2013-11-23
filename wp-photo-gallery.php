@@ -50,6 +50,7 @@
                
                 $my_photo_gallery_slider_settings=array('transition_speed' => '1000',
                                                         'transition_interval' => '4000',
+                                                        'show_panels' =>'1',
                                                         'show_panel_nav' =>'1',
                                                         'enable_overlays' => '0',
                                                         'panel_width'=>'550',
@@ -1254,6 +1255,7 @@
    function photo_gallery_slider_admin_preview(){
        $settings=get_option('my_photo_gallery_slider_settings');
        
+       
  ?>      
    <div style="">  
         <div style="float:left;">
@@ -1392,6 +1394,7 @@
    function print_my_photo_gallery_func(){
        
        $settings=get_option('my_photo_gallery_slider_settings');
+       
        $wpcurrentdir=dirname(__FILE__);
        $wpcurrentdir=str_replace("\\","/",$wpcurrentdir);
        $url = plugin_dir_url(__FILE__);
