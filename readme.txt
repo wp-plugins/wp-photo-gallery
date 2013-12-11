@@ -46,23 +46,25 @@ to theme or pages/posts.
 
 1. Unlimited Photo Galleries(Multiple Photo Gallery).
 
-2. Add wordpress featured image in photo gallery directly from post/page add/edit.
+2. Use wordPress media uploader to upload image.
 
-3. Slider Easing Effects(select your desired slider easing effect ).
+3. Add wordpress featured image in photo gallery directly from post/page add/edit.
 
-4. No advertisements.
+4. Slider Easing Effects(select your desired slider easing effect ).
 
-5. New Field Added Image Description.If image description set it will added to image caption.
+5. No advertisements.
 
-6. New Field Added Image Order,Now admin can display photo gallery according image order.
+6. New Field Added Image Description.If image description set it will added to image caption.
 
-7. New Field added open image link in new tab or same tab.
+7. New Field Added Image Order,Now admin can display photo gallery according image order.
 
-8. Display photo gallery with thumbnail caption.
+8. New Field added open image link in new tab or same tab.
 
-9. Display slider image with caption(image with description).
+9. Display photo gallery with thumbnail caption.
 
-10. Display tumbnail gallary to left,right,top,bottom.
+10. Display slider image with caption(image with description).
+
+11. Display tumbnail gallary to left,right,top,bottom.
 
 
 
@@ -104,6 +106,7 @@ OR you can add this to your theme by adding this code echo do_shortcode('[print_
 6. pro Vesion Manage Photo Gallery Admin Preview
 7. pro Vesion Admin Additional Settings
 8. pro Vesion Add featured image directly from post/page
+7. pro Vesion use WordPress Media Uploader to upload image
 
 == License ==
 
