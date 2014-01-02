@@ -3,7 +3,7 @@ Contributors:nik00726
 Donate link: http://my-php-scripts.net/donate-wordpress_image_thumbnail.php
 Tags:wordpress photo gallery,wp photo gallery,wordpress photo slideshow,wp photo slideshow,wordpress slideshow,wordpress photo gallery slideshow,wordpress photo album slideshow
 Requires at least:3.0
-Tested up to:3.7.1
+Tested up to:3.8
 Version:1.0
 Stable tag:trunk
 License: GPLv2 or later
@@ -41,6 +41,8 @@ to theme or pages/posts.
 
 8. Admin can set slider as slide with arrow left and right arrow.
 
+9. Responsive Admin Layout.
+
 
 **=Pro Version Features=**
 
@@ -65,6 +67,8 @@ to theme or pages/posts.
 10. Display slider image with caption(image with description).
 
 11. Display tumbnail gallary to left,right,top,bottom.
+
+12. Responsive Admin Layout.
 
 
 
