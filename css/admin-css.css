@@ -71,3 +71,7 @@
 .table-striped tbody tr:nth-child(odd) td,.table-striped tbody tr:nth-child(odd) th{background-color:#f9f9f9;}
 .table tbody tr:hover td,.table tbody tr:hover th{background-color:#f5f5f5;}
 .alignCenter{text-align: center;}
+.image_error{color:red;}
+.succMsg{background:#E2F3DA ;border: 1px solid #9ADF8F;color:#556652 !important;padding:8px 8px 8px 36px;text-align:left;margin:5px;margin-left: 0px;margin-top: 30px;width:505px !important;}
+.errMsg{background:#FFCECE ;border: 1px solid #DF8F8F;color:#665252 !important;padding:8px 8px 8px 36px; text-align:left;margin:5px;margin-left: 0px;margin-top: 30px;width:505px !important;}
+.printCode{background: lightYellow none repeat scroll 0 0 !important;border: 1px inset orange !important;height: 36px !important;margin: 10px !important;overflow: auto !important;padding: 6px !important;text-align: left !important;color: black !important;width:auto !important;}
