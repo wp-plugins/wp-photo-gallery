@@ -21,6 +21,8 @@ Admin can add,edit and delete slider images.Before add slider to wordPress blog 
 
 **[Live Demo WP Photo Gallery pro](http://www.i13websolution.com/wpdemo/wp-photo-gallery-pro/)**
 
+**If your theme is responsive then use WordPress Responsive Photo Gallery Plugin at [WordPress Responsive Photo Gallery Plugin](http://wordpress.org/plugins/wp-responsive-photo-gallery/)**
+
 **Please rate this plugin if you find it useful**
 
 
