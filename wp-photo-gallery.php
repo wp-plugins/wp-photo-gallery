@@ -1,8 +1,8 @@
 <?php
     /* 
     Plugin Name: wp photo gallery
-    Plugin URI:http://www.i13websolution.com 
-    Author URI:http://www.i13websolution.com
+    Plugin URI:http://www.i13websolution.com/wordpress-pro-plugins/wordpress-photo-gallery-pro-plugin.html 
+    Author URI:http://www.i13websolution.com/wordpress-pro-plugins/wordpress-photo-gallery-pro-plugin.html
     Description: This is beautiful photo gallery + slider plugin for WordPress.Add any number of images from admin panel.
     Author:I Thirteen Web Solution 
     Version:1.0
@@ -13,7 +13,7 @@
     require_once($dir.'classes/class.Images.php');
 
     add_action('admin_menu', 'add_my_photo_gallery_admin_menu');
-    add_action( 'admin_init', 'my_photo_gallery_admin_init' );
+    //add_action( 'admin_init', 'my_photo_gallery_admin_init' );
     register_activation_hook(__FILE__,'install_my_photo_gallery');
     add_action('wp_enqueue_scripts', 'my_photo_gallery_load_styles_and_js');
     add_shortcode('print_my_photo_gallery', 'print_my_photo_gallery_func' );
@@ -89,11 +89,14 @@
 
     function add_my_photo_gallery_admin_menu(){
 
-        add_menu_page( __( 'Photo Gallery'), __( 'Photo Gallery' ), 'administrator', 'photo_gallery_slider', 'photo_gallery_slider_admin_options' );
-        add_submenu_page( 'photo_gallery_slider', __( 'Slider Setting'), __( 'Slider Setting' ),'administrator', 'photo_gallery_slider', 'photo_gallery_slider_admin_options' );
-        add_submenu_page( 'photo_gallery_slider', __( 'Manage Images'), __( 'Manage Images'),'administrator', 'photo_gallery_image_management', 'photo_gallery_image_management' );
-        add_submenu_page( 'photo_gallery_slider', __( 'Preview Slider'), __( 'Preview Slider'),'administrator', 'photo_gallery_slider_preview', 'photo_gallery_slider_admin_preview' );
+        $hook_suffix_p_g_n=add_menu_page( __( 'Photo Gallery'), __( 'Photo Gallery' ), 'administrator', 'photo_gallery_slider', 'photo_gallery_slider_admin_options' );
+        $hook_suffix_p_g_n=add_submenu_page( 'photo_gallery_slider', __( 'Slider Setting'), __( 'Slider Setting' ),'administrator', 'photo_gallery_slider', 'photo_gallery_slider_admin_options' );
+        $hook_suffix_p_g_n_1=add_submenu_page( 'photo_gallery_slider', __( 'Manage Images'), __( 'Manage Images'),'administrator', 'photo_gallery_image_management', 'photo_gallery_image_management' );
+        $hook_suffix_p_g_n_2=add_submenu_page( 'photo_gallery_slider', __( 'Preview Slider'), __( 'Preview Slider'),'administrator', 'photo_gallery_slider_preview', 'photo_gallery_slider_admin_preview' );
 
+        add_action( 'load-' . $hook_suffix_p_g_n , 'my_photo_gallery_admin_init' );
+        add_action( 'load-' . $hook_suffix_p_g_n_1 , 'my_photo_gallery_admin_init' );
+        add_action( 'load-' . $hook_suffix_p_g_n_2 , 'my_photo_gallery_admin_init');
 
     }
 
@@ -868,7 +871,7 @@
                             update_option('my_photo_gallery_slider_settings_messages', $my_photo_gallery_slider_settings_messages);
 
                             echo "<script type='text/javascript'> location.href='$location';</script>";
-
+							exit;
                         }
                         else{
 
@@ -913,6 +916,7 @@
 
 
                     echo "<script type='text/javascript'> location.href='$location';</script>";
+                    exit;
                 }
                 else{
 
@@ -940,6 +944,7 @@
                         update_option('my_photo_gallery_slider_settings_messages', $my_photo_gallery_slider_settings_messages);
 
                         echo "<script type='text/javascript'> location.href='$location';</script>";
+                        exit;
 
                     }
                     else{
@@ -977,7 +982,8 @@
                         }  
 
                     }     
-                    echo "<script type='text/javascript'> location.href='$location';</script>";          
+                    echo "<script type='text/javascript'> location.href='$location';</script>";  
+                    exit;        
 
                 } 
 
@@ -1223,7 +1229,7 @@
             }  
 
             echo "<script type='text/javascript'> location.href='$location';</script>";
-
+			exit;
         }  
         else if(strtolower($action)==strtolower('deleteselected')){
 
@@ -1271,18 +1277,21 @@
                     }  
 
                     echo "<script type='text/javascript'> location.href='$location';</script>";
+                    exit;
 
 
                 }
                 else{
 
-                    echo "<script type='text/javascript'> location.href='$location';</script>";   
+                    echo "<script type='text/javascript'> location.href='$location';</script>";
+                    exit;   
                 }
 
             }
             else{
 
-                echo "<script type='text/javascript'> location.href='$location';</script>";      
+                echo "<script type='text/javascript'> location.href='$location';</script>"; 
+                exit;     
             }
 
         }      

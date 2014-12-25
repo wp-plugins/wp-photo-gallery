@@ -3,7 +3,7 @@ Contributors:nik00726
 Donate link: http://www.i13websolution.com/donate-wordpress_image_thumbnail.php
 Tags:wordpress photo gallery,wp photo gallery,wordpress photo slideshow,wp photo slideshow,wordpress slideshow,wordpress photo gallery slideshow,wordpress photo album slideshow
 Requires at least:3.0
-Tested up to:4.0
+Tested up to:4.1
 Version:1.0
 Stable tag:trunk
 License: GPLv2 or later
@@ -13,7 +13,7 @@ This is beautiful photo gallery + slider plugin for wordPress blogs and sites.Ad
 
 == Description ==
 
-**Now Support WordPress 4.0**
+**Now Support WordPress 4.1**
 
 WordPress photo gallery + slider is beautiful photo thumbnail gallery with main image.Admin can manages any number of images into the photo gallery slider.
 Admin can add,edit and delete slider images.Before add slider to wordPress blog admin can preview a slider.Admin can set height,width of slider images and thumbnil images also.Admin can also set speed.Admin can also set if want to slide automatic slider or not and many other settings.
